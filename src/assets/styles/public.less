@@ -1,0 +1,62 @@
+body {
+  background: linear-gradient(253deg, #0cc898, #1797d2, #864fe1);
+  background-size: 300% 300%;
+  animation: Background 25s ease infinite;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  font-family: Avenir;
+  .login_input:-webkit-autofill {
+    animation: autofill-fix 1s infinite;
+    -webkit-text-fill-color: #ccc;
+  }
+
+  @keyframes autofill-fix {
+    from {
+      background-color: transparent;
+    }
+    to {
+      background-color: transparent;
+    }
+  }
+
+  #root {
+    background: url("../../assets/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@keyframes Background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.flex_between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card{
+  padding:10px;
+  margin:10px 0;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: transform .2s cubic-bezier(.4,1,.75,.9),box-shadow .2s cubic-bezier(.4,1,.75,.9),-webkit-transform .2s cubic-bezier(.4,1,.75,.9),-webkit-box-shadow .2s cubic-bezier(.4,1,.75,.9);
+  box-shadow: 0 0 0 1px rgba(16,22,26,.15), 0 0 0 rgba(16,22,26,0), 0 0 0 rgba(16,22,26,0);
+  &:hover{
+    box-shadow: 0 0 0 1px rgba(16,22,26,.1), 0 1px 1px rgba(16,22,26,.2), 0 2px 6px rgba(16,22,26,.2);
+  }
+}

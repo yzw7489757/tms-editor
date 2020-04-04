@@ -1,0 +1,4 @@
+**/*.md
+**/*.gz
+package.json
+node_modules/
